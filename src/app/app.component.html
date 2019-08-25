@@ -6,18 +6,25 @@
     nzBreakpoint="sm"
     [(nzCollapsed)]="isCollapsed"
     [nzTrigger]="null"
+    nzTheme="light"
   >
     <div class="sidebar-logo">
-      <a href="https://ng.ant.design/" target="_blank">
-        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo" />
-        <h1>Ant Design Of Angular</h1>
+      <a routerLink="/">
+        <i
+          nz-icon
+          nzType="align-right"
+          nzTheme="outline"
+          style="color:#000"
+        ></i>
+        <h1>Ninghao</h1>
       </a>
     </div>
     <ul
       nz-menu
-      nzTheme="dark"
+      nzTheme="light"
       nzMode="inline"
       [nzInlineCollapsed]="isCollapsed"
+      style="height: 100vh"
     >
       <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
         <ul>
@@ -51,7 +58,6 @@
             [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
           ></i>
         </span>
-        <span>isCollapsed: {{ isCollapsed }}</span>
       </div>
     </nz-header>
     <nz-content>
